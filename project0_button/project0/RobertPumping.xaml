@@ -1,0 +1,212 @@
+﻿<UserControl x:Class="project0.RobertPumping"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:project0"
+             mc:Ignorable="d" Width="388.91" Height="181.545">
+    <UserControl.Resources>
+        <Storyboard x:Key="Pump" Completed="Storyboard_Completed">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="Bar">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-0.666"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-77.5"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="Bar">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0.001"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-0.167"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="robertHead">
+                <EasingColorKeyFrame KeyTime="0" Value="White">
+                    <EasingColorKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseInOut"/>
+                    </EasingColorKeyFrame.EasingFunction>
+                </EasingColorKeyFrame>
+                <EasingColorKeyFrame KeyTime="0:0:1" Value="sc#1, 0.9559733, 0.07227185, 0.07227185">
+                    <EasingColorKeyFrame.EasingFunction>
+                        <CircleEase EasingMode="EaseInOut"/>
+                    </EasingColorKeyFrame.EasingFunction>
+                </EasingColorKeyFrame>
+            </ColorAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.StrokeThickness)" Storyboard.TargetName="robertHead">
+                <EasingDoubleKeyFrame KeyTime="0" Value="10"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="rightForearm">
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-79"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="rightForearm">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-56"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="leftForearm">
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-79"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="leftForearm">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="49.5"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="leftBicep">
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="leftBicep">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="15.5"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="leftBicep">
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-32"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="rightBicep">
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="rightBicep">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-19.5"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="rightBicep">
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-30.5"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="path">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-74.667"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="path">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0.334"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="PumpReverse" Completed="Storyboard_Completed_1">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="Bar">
+                <SplineDoubleKeyFrame KeyTime="0" Value="-76.5"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:1" Value="-1.333"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="Bar">
+                <SplineDoubleKeyFrame KeyTime="0" Value="-0.833"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:1" Value="0.334"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="robertHead">
+                <SplineColorKeyFrame KeyTime="0" Value="sc#1, 0.9559733, 0.07227185, 0.07227185"/>
+                <SplineColorKeyFrame KeyTime="0:0:1" Value="White"/>
+            </ColorAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.StrokeThickness)" Storyboard.TargetName="robertHead">
+                <SplineDoubleKeyFrame KeyTime="0:0:1" Value="10"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="rightForearm">
+                <SplineDoubleKeyFrame KeyTime="0" Value="-79.5"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="rightForearm">
+                <SplineDoubleKeyFrame KeyTime="0" Value="-58.5"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:1" Value="-1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="leftForearm">
+                <SplineDoubleKeyFrame KeyTime="0" Value="-82"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="leftForearm">
+                <SplineDoubleKeyFrame KeyTime="0" Value="50"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="leftBicep">
+                <SplineDoubleKeyFrame KeyTime="0" Value="-0.272"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:1" Value="-90"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="leftBicep">
+                <SplineDoubleKeyFrame KeyTime="0" Value="16.5"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="leftBicep">
+                <SplineDoubleKeyFrame KeyTime="0" Value="-35.5"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="rightBicep">
+                <SplineDoubleKeyFrame KeyTime="0" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:1" Value="90"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="rightBicep">
+                <SplineDoubleKeyFrame KeyTime="0" Value="-21.5"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:1" Value="-1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="rightBicep">
+                <SplineDoubleKeyFrame KeyTime="0" Value="-36.5"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="path">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0.333"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="path">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-74.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-0.001"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </UserControl.Resources>
+    <UserControl.Triggers>
+        <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+            <!--
+            <BeginStoryboard Storyboard="{StaticResource Pump}"/>
+            -->
+        </EventTrigger>
+    </UserControl.Triggers>
+    <Canvas HorizontalAlignment="Left" Height="95.045" VerticalAlignment="Top" Width="100">
+        <Ellipse x:Name="robertHead" Fill="White" Stroke="Black" Height="64" Canvas.Left="168" Canvas.Top="96.5" Width="72" StrokeThickness="10" Panel.ZIndex="20"/>
+        <Rectangle x:Name="Bar" Fill="#FF4F4F4F" HorizontalAlignment="Left" Height="18" VerticalAlignment="Top" Width="343.5" RenderTransformOrigin="0.5,0.5" Canvas.Left="35" Canvas.Top="50.5">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Image x:Name="leftBicep" Height="71.5" Canvas.Left="112.074" Canvas.Top="98.426" Width="52.5" Source="LeftBicepEmpty.png" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="rightBicep" Height="71.5" Canvas.Left="247.574" Canvas.Top="97.426" Width="52.5" Source="RightBicepEmpty.png" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="leftForearm" Height="96.5" Canvas.Left="79" Canvas.Top="50.5" Width="52" Source="LeftForearmEmpty.png" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="rightForearm" Height="96.5" Canvas.Left="282.595" Canvas.Top="50.5" Width="52" Source="RightForearmEmpty.png" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Path x:Name="path" Fill="Black" Canvas.Left="344.499" Data="M12.332999,0.77383256 L24.666002,0.77383256 24.666002,73.773831 12.332999,73.773831 12.332999,62.318833 0,62.318833 0,10.94383 12.332999,10.94383 z M312.32419,0 L312.3266,11.455001 324.65961,11.452417 324.67035,62.827416 312.33737,62.830003 312.33948,72.999997 300.0065,73.002583 299.99121,0.0025835037 z" Height="73.774" RenderTransformOrigin="0.0379862221277254,0.505244618425059" Stretch="Fill" Canvas.Top="20.56" Width="324.67">
+            <Path.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="180.012"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Path.RenderTransform>
+        </Path>
+    </Canvas>
+</UserControl>

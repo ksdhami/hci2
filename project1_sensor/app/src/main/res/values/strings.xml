@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">openSensor</string>
+
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="eyelidLeft">EyelidLeft</string>
+    <string name="pupilLeft">pupilLeft</string>
+    <string name="eyelidRight">eyelidright</string>
+    <string name="pupilRight">pupilRight</string>
+    <string name="background">background</string>
+    <string name="debug">debug</string>
+    <string name="debugLight">debug light</string>
+</resources>

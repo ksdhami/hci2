@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0066a0"
+    tools:context=".FullscreenActivity">
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+    <TextView
+        android:id="@+id/fullscreen_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:keepScreenOn="true"
+        android:text="@string/dummy_content"
+        android:textColor="#33b5e5"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        android:visibility="invisible" />
+
+    <!-- This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows. -->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <ImageView
+            android:id="@+id/BackgroundImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/background"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/bg" />
+
+        <FrameLayout
+            android:id="@+id/pupils"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:translationX="15dp"
+            android:translationY="200dp">
+
+            <ImageView
+                android:id="@+id/PupilLeft"
+                android:layout_width="@android:dimen/thumbnail_height"
+                android:layout_height="90dp"
+                android:contentDescription="@string/pupilLeft"
+                android:translationY="0dp"
+                android:visibility="visible"
+                app:srcCompat="@drawable/pupil_00_white" />
+
+            <ImageView
+                android:id="@+id/PupilRight"
+                android:layout_width="@android:dimen/thumbnail_height"
+                android:layout_height="90dp"
+                android:contentDescription="@string/pupilRight"
+                android:translationX="200dp"
+                android:translationY="0dp"
+                android:visibility="visible"
+                app:srcCompat="@drawable/pupil_00_white" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/eyelids"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:translationX="15dp"
+            android:translationY="200dp">
+
+            <ImageView
+                android:id="@+id/EyelidLeft"
+                android:layout_width="180dp"
+                android:layout_height="90dp"
+                android:contentDescription="@string/eyelidLeft"
+                app:srcCompat="@drawable/eyelid00" />
+
+            <ImageView
+                android:id="@+id/EyelidRight"
+                android:layout_width="180dp"
+                android:layout_height="90dp"
+                android:contentDescription="@string/eyelidRight"
+                android:translationX="200dp"
+                android:visibility="visible"
+                app:srcCompat="@drawable/eyelid00"
+                tools:srcCompat="@drawable/eyelid_00_white" />
+        </FrameLayout>
+
+
+        <LinearLayout
+            android:id="@+id/fullscreen_content_controls"
+            style="?metaButtonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:background="@color/black_overlay"
+            android:orientation="horizontal"
+            tools:ignore="UselessParent">
+
+            <Button
+                android:id="@+id/dummy_button"
+                style="?metaButtonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/dummy_button" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/hourText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="50sp"
+            android:translationX="0dp"
+            android:translationY="20dp" />
+
+        <TextView
+            android:id="@+id/dayText"
+            android:layout_width="match_parent"
+            android:layout_height="113dp"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="25sp"
+            android:translationX="0dp"
+            android:translationY="80dp" />
+
+
+    </FrameLayout>
+
+</FrameLayout>
